@@ -46,12 +46,12 @@
                     <a v-for="item in series.data" :href="item.link">
                         <div class="neon-card flex flex-col p-4 gap-3 transform hover:scale-105 transition duration-300 animate-slide-up">
                           
-                            <!-- 日期區塊在最上方 -->
+                            <!-- 日期區塊 -->
                             <div class="border-b border-gray-600 pb-2 text-sm text-gray-300 text-center font-medium">
                                 <p class="font-semibold">{{ item.date }}</p>
                             </div>
                         
-                            <!-- 大頭貼與資訊區 -->
+                            <!-- 資訊區 -->
                             <div class="flex items-start gap-4">
                                 <img :src="item.imgURL" class="profileImg w-16 h-16 object-cover rounded-full" alt="Twitch頭貼">
                                 <div class="flex flex-col">
