@@ -6,10 +6,13 @@ const app = Vue.createApp({
             RC: [],
             allData: [],
             token: '',
+            countdown: '',
         }
     },
     mounted() {
         this.getList();
+        this.startCountdown();
+
     },
     methods: {
         async getList() {
@@ -73,6 +76,32 @@ const app = Vue.createApp({
             });
             this.token = res.data.access_token;
             console.log("取得 Twitch Token:", this.token);
+        },
+        startCountdown() {
+            const startDate = new Date('2025-07-01T20:00:00+08:00'); // 活動開始時間
+            const endDate = new Date('2025-07-31T23:59:59+08:00');   // 活動結束時間
+          
+            setInterval(() => {
+                const now = new Date();
+            
+                if (now > endDate) {
+                    this.countdown = '🎉 活動已結束，明年敬請期待';
+                    return;
+                }
+            
+                if (now >= startDate) {
+                    this.countdown = 'RC2025活動開始!!';
+                    return;
+                }
+            
+                const diff = startDate - now;
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((diff / (1000 * 60)) % 60);
+                const seconds = Math.floor((diff / 1000) % 60);
+            
+                this.countdown = `距離活動開始 ⏳ 倒數 ${days} 天 ${hours} 小時 ${minutes} 分 ${seconds} 秒`;
+            }, 1000);
         },
     },
 })

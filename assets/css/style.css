@@ -121,9 +121,81 @@
 }
 
 .outlined-text {
-  color: white;
   font-family: 'Adobe 繁黑體 Std B', sans-serif;
+  color: #4199f0 !important;
+  --stroke-width-out: 4px;
+  --stroke-color-out: #000;
+  --stroke-width-in: 2px;
+  --stroke-color-in: #fff;
 
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
-                 -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow:
+    calc(var(--stroke-width-in) * 1) calc(var(--stroke-width-in) * 0) 0
+      var(--stroke-color-in),
+    calc(var(--stroke-width-in) * 0.9239) calc(var(--stroke-width-in) * 0.3827) 0
+      var(--stroke-color-in),
+    calc(var(--stroke-width-in) * 0.7071) calc(var(--stroke-width-in) * 0.7071) 0
+      var(--stroke-color-in),
+    calc(var(--stroke-width-in) * 0.3827) calc(var(--stroke-width-in) * 0.9239) 0
+      var(--stroke-color-in),
+    calc(var(--stroke-width-in) * 0) calc(var(--stroke-width-in) * 1) 0
+      var(--stroke-color-in),
+    calc(var(--stroke-width-in) * -0.3827) calc(var(--stroke-width-in) * 0.9239) 0
+      var(--stroke-color-in),
+    calc(var(--stroke-width-in) * -0.7071) calc(var(--stroke-width-in) * 0.7071) 0
+      var(--stroke-color-in),
+    calc(var(--stroke-width-in) * -0.9239) calc(var(--stroke-width-in) * 0.3827) 0
+      var(--stroke-color-in),
+    calc(var(--stroke-width-in) * -1) calc(var(--stroke-width-in) * 0) 0
+      var(--stroke-color-in),
+    calc(var(--stroke-width-in) * -0.9239) calc(var(--stroke-width-in) * -0.3827) 0
+      var(--stroke-color-in),
+    calc(var(--stroke-width-in) * -0.7071) calc(var(--stroke-width-in) * -0.7071) 0
+      var(--stroke-color-in),
+    calc(var(--stroke-width-in) * -0.3827) calc(var(--stroke-width-in) * -0.9239) 0
+      var(--stroke-color-in),
+    calc(var(--stroke-width-in) * 0) calc(var(--stroke-width-in) * -1) 0
+      var(--stroke-color-in),
+    calc(var(--stroke-width-in) * 0.3827) calc(var(--stroke-width-in) * -0.9239) 0
+      var(--stroke-color-in),
+    calc(var(--stroke-width-in) * 0.7071) calc(var(--stroke-width-in) * -0.7071) 0
+      var(--stroke-color-in),
+    calc(var(--stroke-width-in) * 0.9239) calc(var(--stroke-width-in) * -0.3827) 0
+      var(--stroke-color-in),
+    calc(var(--stroke-width-out) * 1) calc(var(--stroke-width-out) * 0) 0
+      var(--stroke-color-out),
+    calc(var(--stroke-width-out) * 0.9239) calc(var(--stroke-width-out) * 0.3827) 0
+      var(--stroke-color-out),
+    calc(var(--stroke-width-out) * 0.7071) calc(var(--stroke-width-out) * 0.7071) 0
+      var(--stroke-color-out),
+    calc(var(--stroke-width-out) * 0.3827) calc(var(--stroke-width-out) * 0.9239) 0
+      var(--stroke-color-out),
+    calc(var(--stroke-width-out) * 0) calc(var(--stroke-width-out) * 1) 0
+      var(--stroke-color-out),
+    calc(var(--stroke-width-out) * -0.3827) calc(var(--stroke-width-out) * 0.9239) 0
+      var(--stroke-color-out),
+    calc(var(--stroke-width-out) * -0.7071) calc(var(--stroke-width-out) * 0.7071) 0
+      var(--stroke-color-out),
+    calc(var(--stroke-width-out) * -0.9239) calc(var(--stroke-width-out) * 0.3827) 0
+      var(--stroke-color-out),
+    calc(var(--stroke-width-out) * -1) calc(var(--stroke-width-out) * 0) 0
+      var(--stroke-color-out),
+    calc(var(--stroke-width-out) * -0.9239) calc(var(--stroke-width-out) * -0.3827) 0
+      var(--stroke-color-out),
+    calc(var(--stroke-width-out) * -0.7071) calc(var(--stroke-width-out) * -0.7071) 0
+      var(--stroke-color-out),
+    calc(var(--stroke-width-out) * -0.3827) calc(var(--stroke-width-out) * -0.9239) 0
+      var(--stroke-color-out),
+    calc(var(--stroke-width-out) * 0) calc(var(--stroke-width-out) * -1) 0
+      var(--stroke-color-out),
+    calc(var(--stroke-width-out) * 0.3827) calc(var(--stroke-width-out) * -0.9239) 0
+      var(--stroke-color-out),
+    calc(var(--stroke-width-out) * 0.7071) calc(var(--stroke-width-out) * -0.7071) 0
+      var(--stroke-color-out),
+    calc(var(--stroke-width-out) * 0.9239) calc(var(--stroke-width-out) * -0.3827) 0
+      var(--stroke-color-out);
+}
+.twitchIcon{
+  width: 24px;
+  height: 24px;
+  color:purple;
 }
