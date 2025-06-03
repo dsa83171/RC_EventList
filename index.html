@@ -12,7 +12,7 @@
 <body class="text-white relative overflow-y-auto bg-gray-800">
     <div class="hidden md:block fixed h-full w-full z-0 overflow-hidden">
         <img src="assets/img/RMbg.jpg" class="object-cover h-full w-full object-center opacity-40" style="transform: scaleX(-1);">
-      </div>
+    </div>
 
     <!-- 左側背景圖，fixed + z-index -1 -->
     <!-- <div class="hidden md:block fixed left-0 top-0 h-full w-1/4 z-0">
@@ -44,15 +44,25 @@
         
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
                     <a v-for="item in series.data" :href="item.link">
-                        <div class="neon-card flex items-start p-4 gap-4 transform hover:scale-105 transition duration-300 animate-slide-up">
-                            <img :src="item.imgURL" class="profileImg w-16 h-16 object-cover rounded-full" alt="Twitch頭貼">
-                            <div class="flex flex-col">
-                                <h2 class="text-xl font-semibold">{{ item.game }}</h2>
-                                <p class="text-base">{{ item.player }}</p>
-                                <p class="text-sm text-gray-400">{{ item.note }}</p>
+                        <div class="neon-card flex flex-col p-4 gap-3 transform hover:scale-105 transition duration-300 animate-slide-up">
+                          
+                            <!-- 日期區塊在最上方 -->
+                            <div class="border-b border-gray-600 pb-2 text-sm text-gray-300 text-center font-medium">
+                                <p class="font-semibold">{{ item.date }}</p>
                             </div>
+                        
+                            <!-- 大頭貼與資訊區 -->
+                            <div class="flex items-start gap-4">
+                                <img :src="item.imgURL" class="profileImg w-16 h-16 object-cover rounded-full" alt="Twitch頭貼">
+                                <div class="flex flex-col">
+                                    <h2 class="text-xl font-semibold">{{ item.game }}</h2>
+                                    <p class="text-l font-semibold">{{ item.player }}</p>
+                                    <p class="text-sm text-gray-400">{{ item.note }}</p>
+                                </div>
+                            </div>
+                      
                         </div>
-                    </a>
+                      </a>
                 </div>
             </div>
         </div>
