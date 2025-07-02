@@ -90,7 +90,7 @@ const app = Vue.createApp({
                 }
             
                 if (now >= startDate) {
-                    this.countdown = 'RC2025活動開始!!';
+                    this.countdown = '活動開始';
                     return;
                 }
             
